@@ -10,7 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'jistr/vim-nerdtree-tabs'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " commenter: \cc \cu, toggle comment \c<space>
@@ -69,16 +69,10 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.crypt = '🔒'
 let g:airline_symbols.branch = ''
 
-"let NERDTreeMinimalUI=1
-"let g:NERDTreeDirArrowExpandable = '▸'
-"let g:NERDTreeDirArrowCollapsible = '▾'
-"let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-
-"let g:nerdtree_tabs_open_on_console_startup=1
-
+let g:nerdtree_tabs_open_on_console_startup=1
 let g:NERDTreeIndicatorMapCustom = {
   \ "Modified"  : "✹",
   \ "Staged"    : "✚",

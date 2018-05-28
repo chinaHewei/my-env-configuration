@@ -31,6 +31,8 @@ set mouse=a
 syntax on
 syntax enable
 
+source vimrc.plug
+
 filetype on
 filetype plugin on
 filetype indent on
@@ -99,8 +101,6 @@ colorscheme desert
 if &diff
   syntax off
 endif
-
-source vimrc.plug
 
 map <F6> :call CompileAndRun()<CR>
 func! CompileAndRun()
