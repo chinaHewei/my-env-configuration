@@ -10,8 +10,8 @@ set encoding=utf8
 set fileencoding=utf8
 
 set wildmenu wildmode=full
-"set cursorline
-"set cursorcolumn
+set cursorline
+set cursorcolumn
 set number
 set ruler
 set showcmd
@@ -50,7 +50,8 @@ set showmatch
 
 runtime macros/matchit.vim
 
-set lcs=tab:>-,eol:$
+"set lcs=tab:>-,eol:$
+set lcs=tab:>-
 set list
 
 let mapleader=" "
@@ -69,7 +70,7 @@ map <leader><S-f> :Fixmyjs<cr>
 noremap <F12> :LeaderfFunctionAll!<cr>
 
 "set background=dark
-colorscheme desert
+"colorscheme desert
 
 "colorscheme solarized
 "let g:airline_theme='solarized'
@@ -80,8 +81,8 @@ colorscheme desert
 "colorscheme Tomorrow
 "let g:airline_theme='tomorrow'
 
-"colorscheme Tomorrow-Night
-"let g:airline_theme='tomorrow'
+colorscheme Tomorrow-Night
+let g:airline_theme='tomorrow'
 
 "colorscheme Tomorrow-Night-Eighties
 "let g:airline_theme='tomorrow'
@@ -98,7 +99,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+
 Plug 'tpope/vim-fugitive'
+" You can jump between hunks with [c and ]c.
+" You can preview, stage, and undo hunks with 
+" <leader>hp, <leader>hs, and <leader>hu respectively.
+Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'jistr/vim-nerdtree-tabs'
@@ -161,7 +167,6 @@ let g:airline_symbols.branch = ''
 let NERDTreeMinimalUI=1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeShowLineNumbers=1
 let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
@@ -202,10 +207,32 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 "let g:ale_sign_warning = ''
 let g:ale_sign_column_always = 1
 let g:ale_keep_list_window_open = 1
-
 let g:ale_echo_msg_error_str = 'Error'
 let g:ale_echo_msg_warning_str = 'Warning'
 let g:ale_echo_msg_format = '[%linter%] %code%: %s [%severity%]'
 
+" indentline setting
 let g:indentLine_leadingSpaceEnabled = 1
+
+"  gitgutter setting
+set updatetime=500
+set signcolumn=yes
+
+map <F6> :call CompileAndRun()<CR>
+func! CompileAndRun()
+    exec "w"
+    exec "cd %:p:h"
+    if &filetype == 'c'
+        exec "!g++ % -o %<"
+        exec "! ./%<"
+    elseif &filetype == 'cpp'
+        exec "!g++ % -o %<"
+        exec "! ./%<"
+    elseif &filetype == 'java'
+        exec "!javac %"
+        exec "!java %<"
+    elseif &filetype == 'sh'
+        :!./%
+    endif
+endfunc
 
