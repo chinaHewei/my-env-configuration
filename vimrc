@@ -31,7 +31,7 @@ set mouse=a
 syntax on
 syntax enable
 
-source vimrc.plug
+source ~/config/vimrc.plug
 
 filetype on
 filetype plugin on
