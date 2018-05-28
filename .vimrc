@@ -3,6 +3,12 @@ set nocompatible
 set modelines=0
 set backspace=2
 
+set history=50
+set autowrite
+set nobackup
+set nowritebackup
+set noswapfile
+
 au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
 au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
@@ -11,13 +17,14 @@ set fileencoding=utf8
 
 set wildmenu wildmode=full
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set number
+set numberwidth=5
 set ruler
 set showcmd
 set clipboard=unnamed
-set colorcolumn=81
 set textwidth=80
+set colorcolumn=+1
 set laststatus=2
 set mouse=a
 
@@ -51,7 +58,7 @@ set showmatch
 runtime macros/matchit.vim
 
 "set lcs=tab:>-,eol:$
-set lcs=tab:>-
+set lcs=tab:>-,trail:˰,nbsp:˰
 set list
 
 let mapleader=" "
@@ -70,7 +77,7 @@ map <leader><S-f> :Fixmyjs<cr>
 noremap <F12> :LeaderfFunctionAll!<cr>
 
 "set background=dark
-"colorscheme desert
+colorscheme desert
 
 "colorscheme solarized
 "let g:airline_theme='solarized'
@@ -81,8 +88,8 @@ noremap <F12> :LeaderfFunctionAll!<cr>
 "colorscheme Tomorrow
 "let g:airline_theme='tomorrow'
 
-colorscheme Tomorrow-Night
-let g:airline_theme='tomorrow'
+"colorscheme Tomorrow-Night
+"let g:airline_theme='tomorrow'
 
 "colorscheme Tomorrow-Night-Eighties
 "let g:airline_theme='tomorrow'
@@ -107,7 +114,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'jistr/vim-nerdtree-tabs'
+"Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " commenter: \cc \cu, toggle comment \c<space>
@@ -137,7 +144,7 @@ Plug 'terryma/vim-multiple-cursors'
 " provide linting
 Plug 'w0rp/ale'
 
-" Displaying thin vertical lines at each indentation level for code indented 
+" Displaying thin vertical lines at each indentation level for code indented
 " with spaces
 Plug 'Yggdroot/indentLine'
 call plug#end()
@@ -164,14 +171,16 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.crypt = '🔒'
 let g:airline_symbols.branch = ''
 
-let NERDTreeMinimalUI=1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeAutoCenter=1
+"let NERDTreeMinimalUI=1
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
+"let NERDTreeAutoCenter=1
 let NERDTreeShowHidden=1
 let NERDTreeWinSize=40
 let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-let g:nerdtree_tabs_open_on_console_startup=1
+
+"let g:nerdtree_tabs_open_on_console_startup=1
+
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -203,7 +212,7 @@ let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " ale setting
-"let g:ale_sign_error = '✗'
+let g:ale_sign_error = '✖'
 "let g:ale_sign_warning = ''
 let g:ale_sign_column_always = 1
 let g:ale_keep_list_window_open = 1
