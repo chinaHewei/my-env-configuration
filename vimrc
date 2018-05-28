@@ -97,26 +97,26 @@ colorscheme desert
 "let g:airline_theme='tomorrow'
 
 if &diff
-    syntax off
+  syntax off
 endif
 
-source ~/config/.vimrc.pulg
+source vimrc.plug
 
 map <F6> :call CompileAndRun()<CR>
 func! CompileAndRun()
-    exec "w"
-    exec "cd %:p:h"
-    if &filetype == 'c'
-        exec "!g++ % -o %<"
-        exec "! ./%<"
-    elseif &filetype == 'cpp'
-        exec "!g++ % -o %<"
-        exec "! ./%<"
-    elseif &filetype == 'java'
-        exec "!javac %"
-        exec "!java %<"
-    elseif &filetype == 'sh'
-        :!./%
-    endif
+  exec "w"
+  exec "cd %:p:h"
+  if &filetype == 'c'
+    exec "!g++ % -o %<"
+    exec "! ./%<"
+  elseif &filetype == 'cpp'
+    exec "!g++ % -o %<"
+    exec "! ./%<"
+  elseif &filetype == 'java'
+    exec "!javac %"
+    exec "!java %<"
+  elseif &filetype == 'sh'
+    :!./%
+  endif
 endfunc
 
