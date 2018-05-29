@@ -19,6 +19,7 @@ set wildmenu wildmode=full
 set cursorline
 "set cursorcolumn
 set relativenumber
+set number
 set numberwidth=5
 set ruler
 set showcmd
@@ -54,6 +55,7 @@ syntax on
 syntax enable
 
 source ~/config/plugin.vim
+source ~/config/mapping.vim
 
 filetype on
 filetype plugin on
