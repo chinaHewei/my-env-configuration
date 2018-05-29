@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'tpope/vim-fugitive'
@@ -10,8 +10,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'jistr/vim-nerdtree-tabs'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " commenter: \cc \cu, toggle comment \c<space>
 Plug 'scrooloose/nerdcommenter'
@@ -69,29 +69,19 @@ let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.crypt = '🔒'
 let g:airline_symbols.branch = ''
 
-let NERDTreeShowHidden=1
-let NERDTreeWinSize=40
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
-let g:nerdtree_tabs_open_on_console_startup=1
-let g:NERDTreeIndicatorMapCustom = {
-  \ "Modified"  : "✹",
-  \ "Staged"    : "✚",
-  \ "Untracked" : "✭",
-  \ "Renamed"   : "➜",
-  \ "Unmerged"  : "═",
-  \ "Deleted"   : "✖",
-  \ "Dirty"     : "✗",
-  \ "Clean"     : "✔︎",
-  \ "Unknown"   : "?"
-  \ }
-map <F2> :NERDTreeToggle<CR>
+source ~/config/plugins/nerdtree.vim
+source ~/config/plugins/ale.vim
 
 let javascript_enable_domhtmlcss = 1
 
 " LeaderF settings
-let g:Lf_WindowPosition='right'
+"let g:Lf_WindowPosition='right'
 let g:Lf_WindowHeight=0.30
 let g:Lf_PreviewResult = {'Function':0, 'Colorscheme':1}
+let g:Lf_WildIgnore = {
+  \ 'dir': ['.svn','.git','.hg'],
+  \ 'file': ['*.sw?','~$*','*.bak','*.exe','*.o','*.so','*.py[co]']
+  \}
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -103,19 +93,11 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
-" ale setting
-let g:ale_sign_error = '✖'
-let g:ale_sign_warning = '➜'
-let g:ale_sign_column_always = 1
-let g:ale_keep_list_window_open = 1
-let g:ale_echo_msg_error_str = 'Error'
-let g:ale_echo_msg_warning_str = 'Warning'
-let g:ale_echo_msg_format = '[%linter%] %code%: %s [%severity%]'
 
 " indentline setting
-let g:indentLine_leadingSpaceEnabled = 1
+"let g:indentLine_leadingSpaceEnabled = 1
 
 "  gitgutter setting
-set updatetime=500
+set updatetime=1000
 set signcolumn=yes
 

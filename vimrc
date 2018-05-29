@@ -9,8 +9,8 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
-au BufWrite /private/etc/pw.* set nowritebackup nobackup
+"au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+"au BufWrite /private/etc/pw.* set nowritebackup nobackup
 
 set encoding=utf8
 set fileencoding=utf8
@@ -18,7 +18,8 @@ set fileencoding=utf8
 set wildmenu wildmode=full
 set cursorline
 "set cursorcolumn
-set number
+"set number
+set relativenumber
 set numberwidth=5
 set ruler
 set showcmd
@@ -31,7 +32,7 @@ set mouse=a
 syntax on
 syntax enable
 
-source ~/config/vimrc.plug
+source ~/config/main.vim
 
 filetype on
 filetype plugin on
@@ -59,21 +60,34 @@ set showmatch
 
 runtime macros/matchit.vim
 
-set lcs=tab:>-,trail:˰,nbsp:˰
+set lcs=tab:>-
+"set lcs=tab:>-,trail:˰,nbsp:˰
 set list
 
 let mapleader=" "
+
+" easy change vim setting
 nmap <leader>s :source $MYVIMRC<cr>
 nmap <leader>e :e $MYVIMRC<cr>
-inoremap <leader>w <Esc>:w<cr>
+
+" easy write file
 noremap <leader>w :w<cr>
 
-map <leader>tn :tabnew<cr>
+" tab
+map <leader>tC :tabnew<cr>
 map <leader>tc :tabclose<cr>
-map <leader>th :tabp<cr>
-map <leader>tl :tabn<cr>
-map <leader>bh :bp<cr>
-map <leader>bl :bn<cr>
+map <leader>tp :tabp<cr>
+map <leader>tn :tabn<cr>
+map <leader>tf :tabfirst<cr>
+map <leader>tl :tablast<cr>
+
+" buffer
+map <leader>bp :bp<cr>
+map <leader>bn :bn<cr>
+map <leader>bl :bl<cr>
+map <leader>bf :bf<cr>
+map <leader>bL :buffers<cr>
+
 map <leader><S-f> :Fixmyjs<cr>
 noremap <F12> :LeaderfFunctionAll!<cr>
 
