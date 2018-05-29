@@ -23,5 +23,4 @@ map <leader>bf :bf<cr>
 map <leader>bL :buffers<cr>
 
 map <leader><S-f> :Fixmyjs<cr>
-noremap <F12> :LeaderfFunctionAll!<cr>
 

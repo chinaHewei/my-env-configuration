@@ -6,6 +6,7 @@ let g:NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeShowHidden = 1
 let NERDTreeWinSize = 35
 let NERDTreeChDirMode = 1
+let NERDTreeKeepTreeInNewTab = 1
 let NERDTreeIgnore = ['\.pyc','\~$','\.swp']
 let g:nerdtree_tabs_open_on_console_startup = 1
 let g:NERDTreeIndicatorMapCustom = {

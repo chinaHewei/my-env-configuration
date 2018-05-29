@@ -26,7 +26,6 @@ set showcmd
 set clipboard=unnamed
 set textwidth=80
 set colorcolumn=+1
-hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 set laststatus=2
 set mouse=a
 

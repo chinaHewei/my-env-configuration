@@ -47,6 +47,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'easymotion/vim-easymotion'
 
 Plug 'majutsushi/tagbar'
+
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 source ~/config/plugins/airline.vim
@@ -56,6 +58,7 @@ source ~/config/plugins/leaderf.vim
 source ~/config/plugins/autocomplete.vim
 source ~/config/plugins/easy-motion.vim
 source ~/config/plugins/tagbar.vim
+source ~/config/plugins/autoformat.vim
 
 let javascript_enable_domhtmlcss = 1
 
