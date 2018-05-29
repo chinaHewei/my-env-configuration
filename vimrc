@@ -18,7 +18,6 @@ set fileencoding=utf8
 set wildmenu wildmode=full
 set cursorline
 "set cursorcolumn
-"set number
 set relativenumber
 set numberwidth=5
 set ruler
@@ -29,16 +28,6 @@ set colorcolumn=+1
 set laststatus=2
 set mouse=a
 
-syntax on
-syntax enable
-
-source ~/config/main.vim
-
-filetype on
-filetype plugin on
-filetype indent on
-filetype plugin indent on
-
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -46,6 +35,9 @@ set softtabstop=2
 set autoindent
 set smartindent
 set cindent
+
+set lcs=tab:>-
+set list
 
 set incsearch
 set ignorecase
@@ -58,38 +50,17 @@ noremap ? :set hlsearch<cr>?
 noremap * *:set hlsearch<cr>
 set showmatch
 
+syntax on
+syntax enable
+
+source ~/config/plugin.vim
+
+filetype on
+filetype plugin on
+filetype indent on
+filetype plugin indent on
+
 runtime macros/matchit.vim
-
-set lcs=tab:>-
-"set lcs=tab:>-,trail:˰,nbsp:˰
-set list
-
-let mapleader=" "
-
-" easy change vim setting
-nmap <leader>s :source $MYVIMRC<cr>
-nmap <leader>e :e $MYVIMRC<cr>
-
-" easy write file
-noremap <leader>w :w<cr>
-
-" tab
-map <leader>tC :tabnew<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tp :tabp<cr>
-map <leader>tn :tabn<cr>
-map <leader>tf :tabfirst<cr>
-map <leader>tl :tablast<cr>
-
-" buffer
-map <leader>bp :bp<cr>
-map <leader>bn :bn<cr>
-map <leader>bl :bl<cr>
-map <leader>bf :bf<cr>
-map <leader>bL :buffers<cr>
-
-map <leader><S-f> :Fixmyjs<cr>
-noremap <F12> :LeaderfFunctionAll!<cr>
 
 "set background=dark
 colorscheme desert
