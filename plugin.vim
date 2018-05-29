@@ -43,6 +43,10 @@ Plug 'w0rp/ale'
 " Displaying thin vertical lines at each indentation level 
 " for code indented with spaces
 Plug 'Yggdroot/indentLine'
+
+Plug 'easymotion/vim-easymotion'
+
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 source ~/config/plugins/airline.vim
@@ -50,6 +54,8 @@ source ~/config/plugins/nerdtree.vim
 source ~/config/plugins/ale.vim
 source ~/config/plugins/leaderf.vim
 source ~/config/plugins/autocomplete.vim
+source ~/config/plugins/easy-motion.vim
+source ~/config/plugins/tagbar.vim
 
 let javascript_enable_domhtmlcss = 1
 

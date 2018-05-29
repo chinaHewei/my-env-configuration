@@ -20,12 +20,13 @@ set cursorline
 "set cursorcolumn
 set relativenumber
 set number
-set numberwidth=5
+set numberwidth=4
 set ruler
 set showcmd
 set clipboard=unnamed
 set textwidth=80
 set colorcolumn=+1
+hi ColorColumn ctermbg=lightgrey guibg=lightgrey
 set laststatus=2
 set mouse=a
 
@@ -64,26 +65,8 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 
-"set background=dark
+set background=dark
 colorscheme desert
-
-"colorscheme solarized
-"let g:airline_theme='solarized'
-
-"colorscheme molokai
-"let g:airline_theme='molokai'
-
-"colorscheme Tomorrow
-"let g:airline_theme='tomorrow'
-
-"colorscheme Tomorrow-Night
-"let g:airline_theme='tomorrow'
-
-"colorscheme Tomorrow-Night-Eighties
-"let g:airline_theme='tomorrow'
-
-"colorscheme Tomorrow-Night-Bright
-"let g:airline_theme='tomorrow'
 
 if &diff
   syntax off
