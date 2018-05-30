@@ -20,7 +20,7 @@ set cursorline
 "set cursorcolumn
 set relativenumber
 set number
-set numberwidth=4
+set numberwidth=3
 set ruler
 set showcmd
 set clipboard=unnamed
@@ -65,7 +65,7 @@ filetype plugin indent on
 runtime macros/matchit.vim
 
 set background=dark
-colorscheme desert
+"colorscheme desert
 
 if &diff
   syntax off
