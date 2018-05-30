@@ -1,8 +1,6 @@
 "let NERDTreeWinPos = 'right'
 let g:NERDTreeDirArrowExpandable = '▷'
 let g:NERDTreeDirArrowCollapsible = '▼'
-        "let g:tagbar_iconchars = ['▶', '▼']  (default on Linux and Mac OS X)
-        "let g:tagbar_iconchars = ['▷', '◢']
 let NERDTreeShowHidden = 1
 let NERDTreeWinSize = 35
 let NERDTreeChDirMode = 1
