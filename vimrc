@@ -84,6 +84,8 @@ func! CompileAndRun()
   elseif &filetype == 'java'
     exec "!javac %"
     exec "!java %<"
+  elseif &filetype == 'javascript'
+    exec "!node %"
   elseif &filetype == 'sh'
     :!./%
   endif
