@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'tpope/vim-fugitive'
@@ -8,7 +9,8 @@ Plug 'tpope/vim-fugitive'
 " <leader>hp, <leader>hs, and <leader>hu respectively.
 Plug 'airblade/vim-gitgutter'
 
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 "Plug 'jistr/vim-nerdtree-tabs'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 
