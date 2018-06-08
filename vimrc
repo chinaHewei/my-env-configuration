@@ -9,15 +9,12 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-"au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
-"au BufWrite /private/etc/pw.* set nowritebackup nobackup
-
 set encoding=utf8
 set fileencoding=utf8
 
 set wildmenu wildmode=full
 set cursorline
-"set cursorcolumn
+set cursorcolumn
 set relativenumber
 set number
 set numberwidth=3
@@ -36,9 +33,6 @@ set softtabstop=2
 set autoindent
 set smartindent
 set cindent
-
-set lcs=tab:>-
-set list
 
 set incsearch
 set ignorecase
@@ -65,7 +59,6 @@ filetype plugin indent on
 runtime macros/matchit.vim
 
 set background=dark
-"colorscheme desert
 
 if &diff
   syntax off

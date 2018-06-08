@@ -6,12 +6,6 @@ nmap <leader>e :e $MYVIMRC<cr>
 
 " easy write file
 noremap <leader>w :w<cr>
-nnoremap <Leader>ww <C-W>w
-nnoremap <Leader>wd <C-W>c
-nnoremap <Leader>wj <C-W>j
-nnoremap <Leader>wk <C-W>k
-nnoremap <Leader>wh <C-W>h
-nnoremap <Leader>wl <C-W>l
 
 inoremap <C-h> <Left>
 inoremap <C-j> <Down>
