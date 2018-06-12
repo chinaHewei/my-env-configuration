@@ -1,5 +1,6 @@
 " vim is an extension of vi, this setting makes vim incompatible vi
 set nocompatible
+set lazyredraw
 set modelines=0
 set backspace=2
 
@@ -14,7 +15,7 @@ set fileencoding=utf8
 
 set wildmenu wildmode=full
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 set relativenumber
 set number
 set numberwidth=3
@@ -24,7 +25,7 @@ set clipboard=unnamed
 set textwidth=80
 set colorcolumn=+1
 set laststatus=2
-set mouse=a
+"set mouse=a
 
 set expandtab
 set tabstop=2
