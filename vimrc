@@ -49,6 +49,8 @@ set showmatch
 syntax on
 syntax enable
 
+inoremap <C-r>+ <C-g>u<C-\><C-o>"+gP
+
 source ~/config/plugin.vim
 source ~/config/mapping.vim
 
