@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'bling/vim-bufferline'
+"Plug 'bling/vim-bufferline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'tpope/vim-fugitive'
@@ -51,6 +52,11 @@ Plug 'easymotion/vim-easymotion'
 Plug 'majutsushi/tagbar'
 
 Plug 'Chiel92/vim-autoformat'
+
+Plug 'martinda/Jenkinsfile-vim-syntax'
+
+"Plug 'fatih/vim-go'
+Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 
 source ~/config/plugins/airline.vim

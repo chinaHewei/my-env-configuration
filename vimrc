@@ -80,6 +80,8 @@ func! CompileAndRun()
   elseif &filetype == 'java'
     exec "!javac %"
     exec "!java %<"
+  elseif &filetype == 'go'
+    exec "!go run %"
   elseif &filetype == 'javascript'
     exec "!node %"
   elseif &filetype == 'sh'

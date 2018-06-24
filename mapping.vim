@@ -22,6 +22,7 @@ map <leader>tp :tabp<cr>
 map <leader>tn :tabn<cr>
 map <leader>tf :tabfirst<cr>
 map <leader>tl :tablast<cr>
+map <leader>tL :tabs<cr>
 
 " buffer
 map <leader>bp :bp<cr>
