@@ -29,7 +29,7 @@ Plug 'mattn/emmet-vim'
 Plug 'ternjs/tern_for_vim'
 Plug 'pangloss/vim-javascript'
 Plug 'hail2u/vim-css3-syntax'
-Plug 'ruanyl/vim-fixmyjs'
+"Plug 'ruanyl/vim-fixmyjs'
 
 " autocomplete and code snippets
 Plug 'Valloric/YouCompleteMe'
@@ -41,7 +41,7 @@ Plug 'ervandew/supertab'
 Plug 'terryma/vim-multiple-cursors'
 
 " provide linting
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 
 " Displaying thin vertical lines at each indentation level 
 " for code indented with spaces
@@ -55,7 +55,7 @@ Plug 'Chiel92/vim-autoformat'
 
 Plug 'martinda/Jenkinsfile-vim-syntax'
 
-"Plug 'fatih/vim-go'
+Plug 'fatih/vim-go'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 call plug#end()
 
