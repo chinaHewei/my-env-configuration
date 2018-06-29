@@ -61,13 +61,10 @@ filetype plugin indent on
 
 runtime macros/matchit.vim
 
-set background=dark
-
 if &diff
   syntax off
 endif
 
-map <F6> :call CompileAndRun()<CR>
 func! CompileAndRun()
   exec "w"
   exec "cd %:p:h"

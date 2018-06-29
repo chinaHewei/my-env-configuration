@@ -57,6 +57,8 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 
 Plug 'fatih/vim-go'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 source ~/config/plugins/airline.vim
@@ -66,7 +68,7 @@ source ~/config/plugins/leaderf.vim
 source ~/config/plugins/autocomplete.vim
 source ~/config/plugins/easy-motion.vim
 source ~/config/plugins/tagbar.vim
-source ~/config/plugins/autoformat.vim
+source ~/config/plugins/go.vim
 
 let javascript_enable_domhtmlcss = 1
 

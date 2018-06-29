@@ -33,3 +33,12 @@ map <leader>bL :buffers<cr>
 
 map <leader><S-f> :Fixmyjs<cr>
 
+map <F2> :NERDTreeToggle<CR>
+nmap <F3> :TagbarToggle<CR>
+noremap <F4> :Autoformat<CR>
+map <F5> :call CompileAndRun()<CR>
+
+map <F6> :GoDebugStart<CR>
+map <F7> :GoDebugStep<CR>
+map <F8> :GoDebugNext<CR>
+

@@ -1,5 +1,3 @@
-nmap <F3> :TagbarToggle<CR>
-
 let g:tagbar_width = 35
 let g:tagbar_left = 0
 let g:tagbar_sort = 0

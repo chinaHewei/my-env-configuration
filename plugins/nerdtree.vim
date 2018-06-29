@@ -18,5 +18,4 @@ let g:NERDTreeIndicatorMapCustom = {
       \ "Clean"     : "✔︎",
       \ "Unknown"   : "?"
       \ }
-map <F2> :NERDTreeToggle<CR>
 
