@@ -64,6 +64,9 @@ Plug 'fatih/vim-go'
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 Plug 'NLKNguyen/papercolor-theme'
+
+Plug 'lfv89/vim-interestingwords'
+Plug 'itchyny/vim-cursorword'
 call plug#end()
 
 source ~/config/plugins/airline.vim
@@ -81,3 +84,7 @@ let javascript_enable_domhtmlcss = 1
 set updatetime=1000
 set signcolumn=yes
 
+nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
+nnoremap <silent> <leader>K :call UncolorAllWords()<cr>
+nnoremap <silent> n :call WordNavigation('forward')<cr>
+nnoremap <silent> N :call WordNavigation('backward')<cr>
