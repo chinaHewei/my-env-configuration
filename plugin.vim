@@ -70,6 +70,9 @@ Plug 'lfv89/vim-interestingwords'
 Plug 'itchyny/vim-cursorword'
 
 Plug 'mhinz/vim-startify'
+
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 source ~/config/plugins/airline.vim

@@ -14,7 +14,7 @@ set encoding=utf8
 set fileencoding=utf8
 
 set wildmenu wildmode=full
-set cursorline
+"set cursorline
 "set cursorcolumn
 set relativenumber
 set number
@@ -45,6 +45,8 @@ noremap / :set hlsearch<cr>/
 noremap ? :set hlsearch<cr>?
 noremap * *:set hlsearch<cr>
 set showmatch
+
+set foldmethod=indent
 
 syntax on
 syntax enable
