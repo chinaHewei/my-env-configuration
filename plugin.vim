@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 " You can preview, stage, and undo hunks with 
 " <leader>hp, <leader>hs, and <leader>hu respectively.
 Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 
 Plug 'scrooloose/nerdtree'
 
@@ -81,7 +82,7 @@ source ~/config/plugins/go.vim
 let javascript_enable_domhtmlcss = 1
 
 "  gitgutter setting
-set updatetime=1000
+set updatetime=500
 set signcolumn=yes
 
 nnoremap <silent> <leader>k :call InterestingWords('n')<cr>
