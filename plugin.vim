@@ -10,16 +10,21 @@ Plug 'tpope/vim-fugitive'
 " <leader>hp, <leader>hs, and <leader>hu respectively.
 Plug 'airblade/vim-gitgutter'
 
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdtree'
-"Plug 'jistr/vim-nerdtree-tabs'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " commenter: \cc \cu, toggle comment \c<space>
 Plug 'scrooloose/nerdcommenter'
 
-" provides mappings to easily delete, change and add 
-" such surroundings in pairs.
+" provides mappings to easily delete, change and add such surroundings in pairs.
+" usage:
+" ds - delete a surrounding
+" cs - change a surrounding
+"
+" ysiw<surrounding> - add a surrounding
+" ySiw<surrounding> - add a surrounding and place the surrounded text on a new line + indent it
+"
+" yss - add a surrounding to the whole line
+" ySS - add a surrounding to the whole line, place it on a new line
 Plug 'tpope/vim-surround'
 
 "used for locating files, buffers, mrus, tags in large project
