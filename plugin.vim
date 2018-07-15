@@ -68,6 +68,8 @@ Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'lfv89/vim-interestingwords'
 Plug 'itchyny/vim-cursorword'
+
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 source ~/config/plugins/airline.vim

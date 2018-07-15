@@ -33,8 +33,10 @@ map <leader>bL :buffers<cr>
 
 map <leader><S-f> :Fixmyjs<cr>
 
-map <F2> :NERDTreeToggle<CR>
-nmap <F3> :TagbarToggle<CR>
+map <leader>g :NERDTreeToggle<CR>
+map <leader>T :TagbarToggle<CR>
+"map <F2> :NERDTreeToggle<CR>
+"nmap <F3> :TagbarToggle<CR>
 noremap <F4> :Autoformat<CR>
 map <F5> :call CompileAndRun()<CR>
 
