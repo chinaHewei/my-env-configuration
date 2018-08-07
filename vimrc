@@ -14,8 +14,6 @@ set encoding=utf8
 set fileencoding=utf8
 
 set wildmenu wildmode=full
-"set cursorline
-"set cursorcolumn
 set relativenumber
 set number
 set numberwidth=3
@@ -25,7 +23,6 @@ set clipboard=unnamed
 set textwidth=80
 set colorcolumn=+1
 set laststatus=2
-"set mouse=a
 
 set expandtab
 set tabstop=2
@@ -46,15 +43,17 @@ noremap ? :set hlsearch<cr>?
 noremap * *:set hlsearch<cr>
 set showmatch
 
-set foldmethod=indent
+"set foldmethod=indent
 
 syntax on
 syntax enable
 
 inoremap <C-r>+ <C-g>u<C-\><C-o>"+gP
 
-source ~/config/plugin.vim
-source ~/config/mapping.vim
+source $HOME/config/plugin.vim
+source $HOME/config/mapping.vim
+source $VIMRUNTIME/defaults.vim
+source $VIMRUNTIME/indent.vim
 
 filetype on
 filetype plugin on
@@ -88,6 +87,7 @@ func! CompileAndRun()
   endif
 endfunc
 
-"let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_new_list_item_indent = 2
+
+colorscheme PaperColor
