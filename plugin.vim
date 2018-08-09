@@ -75,14 +75,14 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 call plug#end()
 
-source ~/config/plugins/airline.vim
-source ~/config/plugins/nerdtree.vim
-source ~/config/plugins/ale.vim
-source ~/config/plugins/leaderf.vim
-source ~/config/plugins/autocomplete.vim
-source ~/config/plugins/easy-motion.vim
-source ~/config/plugins/tagbar.vim
-source ~/config/plugins/go.vim
+source $HOME/config/plugins/airline.vim
+source $HOME/config/plugins/nerdtree.vim
+source $HOME/config/plugins/ale.vim
+source $HOME/config/plugins/leaderf.vim
+source $HOME/config/plugins/autocomplete.vim
+source $HOME/config/plugins/easy-motion.vim
+source $HOME/config/plugins/tagbar.vim
+source $HOME/config/plugins/go.vim
 
 let javascript_enable_domhtmlcss = 1
 
